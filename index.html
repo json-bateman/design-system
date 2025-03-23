@@ -17,11 +17,11 @@
     document.documentElement.classList.add('js');
   </script>
 
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="utilities.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/styles.css">
 
-  <meta name="keywords" content="technology linux presentation akron">
+  <meta name="keywords" content="design system style default ">
   <meta name="description" content="A group for lovers of Linux and technology in general.">
   <!-- OpenGraph Meta -->
   <meta property="og:title" content="My Website">
@@ -66,12 +66,21 @@
         <div class="bg-text line-box"></div>
       </div>
 
-      <section id="colors" class="fs-500 mt">
+      <section id="colors flex" class="fs-500 mt">
         <h2 class="fs-600 mb-text">00 Colors</h2>
-        <hr class="mb-8">
+        <hr class="mb">
+
+        <div class="w-full flex justify-end mb">
+          <select id="theme-select" class="fs-400">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="burgundy-light">Burgundy Light</option>
+            <option value="burgundy-dark">Burgundy Dark</option>
+          </select>
+        </div>
 
         <div class="flex wrap gap mb-16">
-          <div class="flex-col">
+          <div class="colors-item">
             <div class="colors-box text-bg bg-text">
               <span>Text</span>
             </div>
@@ -79,7 +88,7 @@
             <span class="fs-400">HSL 320 36% 90%</span>
           </div>
 
-          <div class="flex-col">
+          <div class="colors-item">
             <div class="colors-box text-bg bg-primary">
               <span>Primary</span>
             </div>
@@ -87,7 +96,7 @@
             <span class="fs-400">HSL 322 36% 75%</span>
           </div>
 
-          <div class="flex-col">
+          <div class="colors-item">
             <div class="colors-box text-bg bg-secondary">
               <span>Secondary</span>
             </div>
@@ -95,7 +104,7 @@
             <span class="fs-400">HSL 356 37% 32%</span>
           </div>
 
-          <div class="flex-col">
+          <div class="colors-item">
             <div class="colors-box text-bg bg-accent">
               <span>Accent</span>
             </div>
@@ -103,7 +112,7 @@
             <span class="fs-400">HSL 7 37% 58%</span>
           </div>
 
-          <div class="flex-col">
+          <div class="colors-item">
             <div class="colors-box text bg">
               <span>Background</span>
             </div>
@@ -188,8 +197,8 @@
     </div>
   </main>
   <!-- javascript -->
-  <script src="theme.js"></script>
-  <script src="script.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

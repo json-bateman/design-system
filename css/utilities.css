@@ -1,18 +1,34 @@
 /* toggle for light and dark mode */
 html[data-theme='light'] {
-  --text: 319, 37%, 10%;
-  --background: 324, 38%, 95%;
+  --text: 319, 47%, 5%;
+  --background: 324, 38%, 97%;
   --primary: 322, 36%, 25%;
   --secondary: 356, 37%, 68%;
   --accent: 7, 37%, 42%;
 }
 
 html[data-theme='dark'] {
-  --text: 320 36% 90%;
+  --text: 320 46% 93%;
   --background: 324, 38%, 5%;
   --primary: 322, 36%, 75%;
   --secondary: 356, 37%, 32%;
   --accent: 7, 37%, 58%;
+}
+
+html[data-theme="burgundy-light"] {
+  --text: 17, 47%, 6%;
+  --background: 10, 60%, 98%;
+  --primary: 18, 51%, 51%;
+  --secondary: 19, 53%, 75%;
+  --accent: 18, 57%, 64%;
+}
+
+html[data-theme="burgundy-dark"] {
+  --text: 17, 47%, 94%;
+  --background: 10, 60%, 2%;
+  --primary: 18, 51%, 49%;
+  --secondary: 19, 53%, 25%;
+  --accent: 18, 57%, 36%;
 }
 
 /* selects the root of the dom tree, <html> in our case */
@@ -234,4 +250,24 @@ html[data-theme='dark'] {
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.mb-16 {
+  margin-bottom: 64px;
+}
+
+.mb-text {
+  margin-bottom: -8px;
+}
+
+.border-text {
+  border: 2px solid hsl(var(--text));
+}
+
+.w-full {
+  width: 100%;
 }
