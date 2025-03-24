@@ -193,16 +193,20 @@ html[data-theme="burgundy-dark"] {
   font-family: var(--ff-sans);
 }
 
-.letter-spacing-1 {
+.letter-spacing-4 {
   letter-spacing: 3.5px;
 }
 
-.letter-spacing-2 {
+.letter-spacing-3 {
   letter-spacing: 2.7px;
 }
 
-.letter-spacing-3 {
-  letter-spacing: 2.35px;
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
 }
 
 .uppercase {
@@ -261,7 +265,7 @@ html[data-theme="burgundy-dark"] {
 }
 
 .mb-text {
-  margin-bottom: -8px;
+  margin-bottom: -0.18em;
 }
 
 .border-text {

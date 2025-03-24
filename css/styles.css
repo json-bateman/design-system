@@ -33,6 +33,7 @@ main {
 .nav-item {
   cursor: pointer;
   font-family: var(--ff-sans);
+  letter-spacing: 1px;
 }
 
 .nav-item:hover {
@@ -176,15 +177,20 @@ main {
   color: hsl(var(--primary), 0.9);
 }
 
+.textarea-container {
+  height: 128px;
+}
+
 .textarea {
   padding-top: 4px;
   color: hsl(var(--text));
   background-color: hsl(var(--background));
-  resize: none;
   box-shadow: 3px 3px 0px hsl(var(--primary));
   border: 1.5px solid hsl(var(--primary));
-  height: 120px;
-  width: 256px;
+  resize: none;
+  /* inherit from parent div if you want to resize */
+  height: inherit;
+  width: inherit;
   font-family: var(--ff-sans);
 }
 
@@ -217,14 +223,16 @@ main {
   padding: 0px;
   margin: 0px;
   font-size: var(--fs-400);
-  background-color: hsl(var(--primary), 0.03);
-  box-shadow: 0 1px 0 hsl(var(--primary), 0.1);
+  font-family: var(--ff-sans);
+  letter-spacing: 1px;
+  background-color: hsl(var(--primary), 0.07);
+  box-shadow: 0 1px 0 hsl(var(--primary), 0.2);
   color: hsl(var(--text));
 }
 
 .tab:hover {
   background-color: hsl(var(--primary), 0.1);
-  box-shadow: 0 1px 0 hsl(var(--primary), 0.15);
+  box-shadow: 0 1px 0 hsl(var(--primary), 0.1);
 }
 
 .tab-selected {
@@ -252,12 +260,16 @@ main {
     align-items: stretch;
   }
 
+  .tab-selected:hover {
+    box-shadow: 0 1px 0 hsl(var(--primary), 0.2);
+  }
+
   .tab {
     width: 100%;
     /* full width tabs */
-    text-align: left;
+    text-align: right;
     padding: 1rem;
-    border-bottom: 1px solid hsl(var(--primary), 0.1);
+    box-shadow: 0 1px 0 hsl(var(--primary), 0.2);
   }
 
 }
