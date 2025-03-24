@@ -46,17 +46,19 @@
 
 <body>
   <!-- Content -->
-  <main class="ml mr ff-serif">
-    <div class="flex-col">
-      <header class="flex justify-between">
-        <h1 class="fs-700 underline">Design System</h1>
-        <div id="open" class="open-nav" data-visible="true"></div>
-        <nav id="navbar" class="gap fs-400">
+  <main class="ml mr ff-serif wrap flex">
+    <div class="flex-col wrap">
+      <header class="flex justify-between wrap">
+        <div class="flex justify-between">
+          <h1 class="fs-700 underline">Design System</h1>
+          <div id="open" class="open-nav" data-visible="true"></div>
+        </div>
+        <nav id="navbar" class="gap nav fs-400">
           <span id="close" class="close-nav">X</span>
           <a href="#colors" class="nav-item">Colors</a>
           <a href="#typography" class="nav-item">Typography</a>
           <a href="#buttons-inputs" class="nav-item">Buttons</a>
-          <a href="#forms" class="nav-item">Forms</a>
+          <a href="#tablist" class="nav-item">Tablist</a>
         </nav>
       </header>
       <div class="flex justify-end">
@@ -66,12 +68,12 @@
         <div class="bg-text line-box"></div>
       </div>
 
-      <section id="colors flex" class="fs-500 mt">
+      <section id="colors" class="fs-500 mt">
         <h2 class="fs-600 mb-text">00 Colors</h2>
         <hr class="mb">
 
         <div class="w-full flex justify-end mb">
-          <select id="theme-select" class="fs-400">
+          <select id="theme-select" class="select fs-400">
             <option value="light">Light</option>
             <option value="dark">Dark</option>
             <option value="burgundy-light">Burgundy Light</option>
@@ -186,12 +188,72 @@
 
       <section id="buttons-inputs" class="mb-16">
         <h2 class="fs-600 mb-text">02 Buttons && Inputs</h2>
-        <hr>
+        <hr class="mb-16">
+
+        <div class="flex gap wrap">
+          <div class="flex-col gap">
+            <select id="theme-select" class="fs-400 select">
+              <option value="banana">Select</option>
+              <option value="banana">🍌</option>
+              <option value="two-bananas">🍌🍌</option>
+              <option value="monkey-banana">🍌🐒</option>
+              <option value="orange-banana">🍌🍊🦧</option>
+            </select>
+            <input class="input fs-400" placeholder="input...">
+          </div>
+          <div class="flex-col gap">
+            <textarea class="textarea" placeholder="Write your textarea..."></textarea>
+            <button class="button fs-400">Submit</button>
+          </div>
+        </div>
       </section>
 
-      <section id="forms" class="mb-16">
-        <h2 class="fs-600 mb-text">03 Forms</h2>
-        <hr>
+      <section id="tablist" class="mb-16">
+        <h2 class="fs-600 mb-text">03 Tablist</h2>
+        <hr class="mb-8">
+
+        <!-- .tab-group must include role="tab" and .tab-panels, controlled by js -->
+        <div class="tab-group">
+          <div class="tabs" role="tablist" aria-label="Tabs">
+            <button class="tab tab-selected" role="tab" aria-selected="true">Short</button>
+            <button class="tab" role="tab" aria-selected="false">Medium</button>
+            <button class="tab" role="tab" aria-selected="false">Long</button>
+          </div>
+
+          <article class="tab-panel">
+            <h3>Short Section</h3>
+            <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis
+              pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec,
+              vulputate eget, arcu.</p>
+          </article>
+
+          <article class="tab-panel hidden">
+            <h3>Medium Section</h3>
+            <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis
+              pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec,
+              vulputate eget, arcu.</p>
+
+            <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit.
+              Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit
+              viverra.</p>
+          </article>
+
+          <article class="tab-panel hidden">
+            <h3>Long Section</h3>
+            <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Vestibulum turpis sem, aliquet eget, lobortis
+              pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet nec,
+              vulputate eget, arcu.</p>
+
+            <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit.
+              Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit
+              viverra.</p>
+
+            <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Morbi mattis ullamcorper velit.
+              Pellentesque posuere. Etiam ut purus mattis mauris sodales aliquam. Praesent nec nisl a purus blandit
+              viverra.</p>
+          </article>
+        </div>
+
       </section>
 
     </div>

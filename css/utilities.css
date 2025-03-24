@@ -271,3 +271,7 @@ html[data-theme="burgundy-dark"] {
 .w-full {
   width: 100%;
 }
+
+.hidden {
+  display: none;
+}
