@@ -219,6 +219,7 @@ main {
   font-size: var(--fs-400);
   background-color: hsl(var(--primary), 0.03);
   box-shadow: 0 1px 0 hsl(var(--primary), 0.1);
+  color: hsl(var(--text));
 }
 
 .tab:hover {
