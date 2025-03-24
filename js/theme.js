@@ -3,6 +3,21 @@ const storedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 
 document.documentElement.setAttribute('data-theme', storedTheme);
 themeSelect = document.getElementById('theme-select')
 
+function updateMetaThemeColor() {
+  const metaThemeColor = document.getElementById('meta-theme-color');
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+
+  const themeColors = {
+    light: "#f8f8f8",
+    dark: "#222222",
+    "burgundy-light": "#f0d0d0",
+    "burgundy-dark": "#333333"
+  };
+
+  const color = themeColors[currentTheme] || "#f8f8f8";
+  metaThemeColor.setAttribute('content', color);
+}
+
 function setTheme(theme) {
   if (theme === 'system') {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
@@ -11,8 +26,9 @@ function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
   }
 
-  // Optional: persist selection
+  // Persist selection
   localStorage.setItem('theme', theme);
+  updateMetaThemeColor();
 }
 
 const saved = localStorage.getItem('theme') || 'system';

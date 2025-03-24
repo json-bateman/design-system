@@ -8,7 +8,7 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --text: 320 46% 93%;
+  --text: 320, 46%, 93%;
   --background: 324, 38%, 5%;
   --primary: 322, 36%, 75%;
   --secondary: 356, 37%, 32%;
